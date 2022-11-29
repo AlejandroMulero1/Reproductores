@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/ibtnPlayAlmacenamiento"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play"
+            app:layout_constraintBottom_toBottomOf="@+id/txtAudioAlmacenamiento"
+            app:layout_constraintStart_toEndOf="@+id/txtAudioAlmacenamiento"
+            app:layout_constraintTop_toTopOf="@+id/txtAudioAlmacenamiento"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/ibtnPauseAlmacenamiento"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="88dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_pause"
+            app:layout_constraintBottom_toBottomOf="@+id/txtAudioAlmacenamiento"
+            app:layout_constraintStart_toEndOf="@+id/ibtnPlayAlmacenamiento"
+            app:layout_constraintTop_toTopOf="@+id/txtAudioAlmacenamiento"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtAudioAlmacenamiento"
+            android:layout_width="171dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="128dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Reproductor de audio via Almacenamiento"
+            android:textAlignment="center"
+            android:textColor="@color/teal_200"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibtnStopAlmacenamiento"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="12dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_stop"
+            app:layout_constraintBottom_toBottomOf="@+id/txtAudioAlmacenamiento"
+            app:layout_constraintStart_toEndOf="@+id/ibtnPlayAlmacenamiento"
+            app:layout_constraintTop_toTopOf="@+id/txtAudioAlmacenamiento"
+            app:layout_constraintVertical_bias="0.0"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txtAudioURL"
+            android:layout_width="173dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Reproductor de audio por URL"
+            android:textAlignment="center"
+            android:textColor="@color/teal_200"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibtnPlayURL"
+            android:layout_width="91dp"
+            android:layout_height="66dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="36dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_play"
+            app:layout_constraintBottom_toBottomOf="@+id/txtAudioURL"
+            app:layout_constraintStart_toEndOf="@+id/txtAudioURL"
+            app:layout_constraintTop_toTopOf="@+id/txtAudioURL"
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/ibtnPauseURL"
+            android:layout_width="90dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="12dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_pause"
+            app:layout_constraintBottom_toBottomOf="@+id/txtAudioURL"
+            app:layout_constraintStart_toEndOf="@+id/ibtnPlayURL"
+            app:layout_constraintTop_toTopOf="@+id/txtAudioURL"
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="353dp"
+            android:layout_height="248dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.755" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>
